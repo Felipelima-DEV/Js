@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando condição IF</title>
+    <style>
+        body{background-color: rgb(0, 106, 255);
+             font-family: Arial, Helvetica, sans-serif;
+             font-size: 20px;
+             color: white;
+            }
+        div{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            font-weight: 300;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Treinando condição</h1>
+    Digite seu nome <input type="text" name="txt2" id="txt2">
+    Digite seu pais <input type="text" name="txt1" id="txt1">
+    <input type="button" value="varificar"  onclick="go()"> <br>
+
+   <br> Digite sua idade  <input type="text" name="ida" id="ida">
+    Digite seu peso  <input type="number" name="pes" id="pes">
+    <input type="button" value="verificar" onclick="ir()">
+
+    <div id="res"> </div>
+    <div id="nes"> </div>
+    <script>function go(){
+        var no = window.document.getElementById('txt2')
+        var pi = window.document.getElementById('txt1')
+        var res = window.document.getElementById('res')
+        var n = (no.value)
+        var n2 = (pi.value)
+        res.innerHTML = (`Seu nome é ${n} e voce é do ${n2} , seja bem vindo`)
+         if(n2 ==`brasil`){res.innerHTML+= ('Voce é brasileiro')}
+         else{res.innerHTML+=(  ' Voce é estrangeiro')}
+        
+    }
+
+    function ir(){
+        var idade = window.document.getElementById('ida')
+        var peso = window.document.getElementById('pes')
+        var nes = window.document.getElementById('nes')
+        var i = (idade.value)
+        var p = (peso.value)
+        nes.innerHTML = (` sua idade é ${i}, anos `)
+        if (i <= 15 ){nes.innerHTML +=(' Voce, nao esta autorizado a votar ')}
+        else if(i >=16 && i <=17 ){nes.innerHTML += (' Voce ja pode votar, porem o voto nao é obrigatorio ')}
+        else if (i >=18 && i <=65){nes.innerHTML += ('Voce é obrigado a votar')}
+        else if(i >= 66) {nes.innerHTML += ('Voce ja nao é mais obrigado a votar')}
+    }
+
+
+
+
+    
+
+
+    </script>
+    
+</body>
+</html>
